@@ -1,0 +1,7 @@
+<%= render "admin/shared/menu" %>
+<div class="row">
+  <center>
+    <h2>New Dog "<i><%= @dog.name%></i>"</h2>
+  </center>
+  <%= render 'form', dog: @dog %>
+</div>

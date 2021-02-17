@@ -1,3 +1,33 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.homeindexcenter { text-align: center; }
+
+.home-index-row-block { 
+  display: block !important; 
+  text-align: -webkit-center;
+}
+
+.vom-Weisse-Kirche { padding-top: 10%; }
+
+#first-content { 
+  height: 100vh;
+  background: image-url('kendi.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.leftimg {
+  float: left;
+  margin: 0px 7px 7px 0;
+}
+
+.pitomnik-nim-drathaarov { text-align: center; }
+
+.pitomnik-nim-drathaarov-vom-Weisse-Kirche { margin-top: 3vw; }
+
+.ukraine-vom-Weisse-Kirche { margin-top: 2vw; }
+
+.benefits-german-drahthaars-text { margin-top: 4vw; }

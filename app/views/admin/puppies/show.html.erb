@@ -1,0 +1,20 @@
+<%= render "admin/shared/menu" %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @puppy.name %>
+</p>
+
+<p>
+  <strong>Descriptin:</strong>
+  <%= @puppy.descriptin %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @puppy.date_of_birth %>
+</p>
+
+<%= link_to 'Edit', edit_admin_puppy_path(@puppy) %> |
+<%= link_to 'Back', puppies_path %>

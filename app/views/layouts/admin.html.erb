@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ddwk</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= tinymce_assets %>
+  </head>
+
+  <body>
+    <script type="text/javascript" src="/assets/tinymce.js">
+      $(document).ready(function() {
+        return tinymce.remove();
+      });
+    </script>
+    <%= render "admin/shared/menu" %>
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <center>
+          <p id="notice"><%= notice %></p>
+        </center>
+        <div class="col-md-6">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

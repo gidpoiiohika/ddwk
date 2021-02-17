@@ -1,2 +1,113 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div id="first-content">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="tel: +380679650320">+38 (067) 965 03 20 | Viber, Whatsap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tel: +38506597059">+38 50 659 70 59</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <a class="mr-sm-2" width="50" height="50"> <%= image_tag("youtube.png") %></a>
+          <a class="my-2 my-sm-0" width="50" height="50" tabindex="-10"> <%= image_tag("facebook.png") %></a>
+        </form>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container">
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Главная</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Про питомник</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">История Породы</a>
+          <a class="dropdown-item" href="#">Заводчик</a>
+          <a class="dropdown-item" href="#">Фото с охоты</a>
+          <a class="dropdown-item" href="#">Видео</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Собаки питомника</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Щенки в продаже</a>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Собаки у охотников</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Новости</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Контакты</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container vom-Weisse-Kirche">
+    <h1 class="homeindexcenter">vom Weisse Kirche</h1>
+    <div class="row home-index-row-block">
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <h3>питомник немецких дратхааров разведение, натаска, подготовка к выставкам, щенки</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap-right">
+      <% if user_signed_in? %>
+        <%= current_user.email %>
+        <%= link_to "| Logout", destroy_user_session_path, :method => :delete, :class => "entrance"  %>
+      <% else %>
+        <%= link_to "Login", new_user_session_path, :class => "entrance" %> | 
+        <%= link_to "Sign Up", new_user_registration_path, :class => "entrance" %>
+      <% end %>
+<div>
+
+
+<div class="container ukraine-vom-Weisse-Kirche">
+  <h1 class="pitomnik-nim-drathaarov">Питомник немецких дратхааров в Украине "vom Weisse Kirche"</h1>
+  <%= image_tag("дратхаар-белій-фон.jpg", class: "leftimg", width: "379", height: "253" )%>
+  <h6 class="pitomnik-nim-drathaarov-vom-Weisse-Kirche">  
+    Питомник немецких дратхааров vom Weisse Kirche основан в 2010 году, расположен в Украине, г. Белая Церковь (Киевская область). Мы профессионально занимаемся разведением и натаской немецких дратхааров. В питомнике vom Weisse Kirche представлены лучшие собаки породы Deutsch Drahthaar.
+  </h6>
+  <h6>
+    Наши собаки победители и номинанты престижных международных выставок в Украине и за рубежом. Собаки питомника имеют высокие оценки по рабочим качествам и экстерьеру, считаются одними из лучших дратхааров в Украине. У нас вы можете подобрать и приобрести щенков породы Deutsch Drahthaar — лучших в своем роде!
+  </h6>
+  <h6>
+    Мы имеем многолетний опыт работы с собаками этой породы, который подтверждается многочисленными победами на конкурсах и кубках, оценивание на которых проводилось судьями с Украины и зарубежных стран. Если вы хотите найти настоящий питомник дратхааров в Украине, — вы не ошибетесь, обратившись к нам!
+  </h6>  
+</div>
+
+<div class="container benefits-german-drahthaars-text">
+  <div class="row">
+    <div class="col-sm-6 col-md-6">
+      <h3>Преимущества немецких дратхааров</h3>
+      <h5>Почему многие охотники уже имевшие собак питомника и еще кто только  впервые решился охотиться с легавой, приобретают щенков или взрослых подготовленных немецких дратхааров питомника vom Weisse Kirche?</h5>
+      <h6>Наши собаки по своим разносторонним рабочим качествам, на протяжении уже более десятка лет, устраивают охотников в различных местностях и с разными погодными и климатическими условиями. Мы готовим собак для охот в поле со стойкой, для работы по водоплавающей и болотной дичи. Особое внимание уделяется развитию навыков при работе с голосом по поиску и преследованию зайца, лисы, косули, облаиванию кабана, по поиску и  задержанию барсука до прихода охотника.</h6>
+      <h6>Одним из важных факторов является врожденная подача и работа по кровяному следу до суток, что практически исключает потерю отстрелянной дичи и подранков.</h6>
+    </div> 
+    <div class="col-sm-6 col-md-6">
+      <h6>За годы работы питомника, было выиграно и получено значительное число побед. Наши собаки — одни из лучших в своем роде. Независимо от того какой питомник немецких дратхааров в Украине будет вами выбран, собаки этой породы станут вашими надежными помощниками. Это умнейшие существа, быстро обучающиеся и хорошо поддающиеся натаске. Тяжело найти более надежного компаньона для охоты чем дратхаар.</h6>
+      <h6>Содержание немецкого дратхаара обладающего жесткой шерстью не требует особых условий (по сравнению с некоторыми иными собаками охотничьих пород). Они очень послушны и имеют приятный нрав. Некоторые из них обладают охранными качествами.</h6>
+      <h6>Одной из важнейших особенностей собак из питомника немецких дратхааров vom Weisse Kirche является то, что они очень дружелюбны к детям. Вы можете быть спокойны за ваших детей, внуков и близких. Немецкий дратхаар — ваш надежный помощник на охоте и приятный друг в быту.</h6>
+    </div>
+  </div>
+</div>
+
+

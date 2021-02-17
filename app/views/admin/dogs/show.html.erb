@@ -1,0 +1,16 @@
+<%= render "admin/shared/menu" %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dog.name %>
+</p>
+
+<p>
+  <strong>Descriptin:</strong>
+  <%= @dog.descriptin %>
+</p>
+
+<%= link_to 'Edit', edit_admin_dog_path(@dog) %> |
+<%= link_to 'Back', admin_dogs_path %>

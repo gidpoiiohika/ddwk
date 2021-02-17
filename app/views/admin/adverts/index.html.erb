@@ -1,0 +1,31 @@
+
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <br/>
+    <center>
+      <h2>Новости</h2>
+      <%= link_to "New Advert", new_admin_advert_path, :class => "btn btn-info" %>
+      <br/>
+      <br/>
+    </center>
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+      <% @adverts.each_with_index do |advert, index| %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= advert.name %></td>
+          <td>
+            <%= link_to 'Edit', edit_admin_advert_path(advert) %>
+            <%= link_to 'Destroy', admin_advert_path(advert), method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+

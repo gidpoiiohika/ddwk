@@ -1,0 +1,32 @@
+<%= render "admin/shared/menu" %>
+
+<p id="notice"><%= notice %></p>
+
+<div class="row justify-content-center">
+  <div class="col-md-4">
+    <br/>
+    <center>
+      <h2>Щенки потомника</h2>
+      <%= link_to "New Puppy", new_admin_puppy_path, :class => "btn btn-info" %>
+      <br/>
+      <br/>
+    </center>
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+      <% @puppies.each_with_index do |puppy, index| %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= puppy.name %></td>
+          <td>
+            <%= link_to 'Edit', edit_admin_puppy_path(puppy) %>
+            <%= link_to 'Destroy', admin_puppy_path(puppy), method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

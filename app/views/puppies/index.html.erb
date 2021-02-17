@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Puppies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Descriptin</th>
+      <th>Date of birth</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @puppies.each do |puppy| %>
+      <tr>
+        <td><%= puppy.name %></td>
+        <td><%= puppy.descriptin %></td>
+        <td><%= puppy.date_of_birth %></td>
+        <td><%= link_to 'Show', puppy %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

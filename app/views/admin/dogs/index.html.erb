@@ -1,0 +1,36 @@
+<%= render "admin/shared/menu" %>
+
+<div class="row justify-content-center">
+  <center>
+    <p id="notice"><%= notice %></p>
+  </center>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-md-4">
+    <br/>
+    <center>
+      <h2>Собаки потомника</h2>
+      <%= link_to "New Advert", new_admin_dog_path, :class => "btn btn-info" %>
+      <br/>
+      <br/>
+    </center>
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+      <% @dogs.each_with_index do |dog, index| %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= dog.name %></td>
+          <td>
+            <%= link_to 'Edit', edit_admin_dog_path(dog) %>
+            <%= link_to 'Destroy', admin_dog_path(dog), method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

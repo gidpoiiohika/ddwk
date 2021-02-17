@@ -1,5 +1,20 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
-  resources :adverts
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root 'welcome#index'
+
+  devise_for :users, controllers: { registrations: "users/registrations" }
+
+  devise_scope :user do  
+    get '/users/sign_out' => 'devise/sessions#destroy'     
+  end
+
+  resources :adverts, only: [:show, :index]
+  resources :puppies, only: [:show, :index]
+  resources :dogs, only: [:show, :index]
+
+  namespace :admin do
+    root "adverts#index"
+    resources :adverts
+    resources :puppies
+    resources :dogs
+  end
 end
